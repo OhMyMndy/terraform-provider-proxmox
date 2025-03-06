@@ -414,6 +414,7 @@ In the example below, we create a user `terraform` and assign the `sudo` privile
     terraform ALL=(root) NOPASSWD: /sbin/pvesm
     terraform ALL=(root) NOPASSWD: /sbin/qm
     terraform ALL=(root) NOPASSWD: /usr/bin/tee /var/lib/vz/*
+    terraform ALL=(root) NOPASSWD: /usr/bin/tee /etc/pve/nodes/*/qemu-server/*
     ```
 
   If you're using a different datastore for snippets, not the default `local`, you should add the datastore's mount point to the sudoers file as well, for example:
